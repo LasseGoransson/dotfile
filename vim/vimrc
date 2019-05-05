@@ -77,6 +77,15 @@ nnoremap tj  :tabprev<CR>
 noremap  tn  :tabnew<CR>
 nnoremap  <leader>q   :Explore<CR>
 
+" Spell check
+" Fix mistake
+noremap <Leader>sf z= 
+" Add to dict
+noremap <Leader>sa zg
+" Next mistake
+noremap <Leader>sn ]s
+" Enable check
+nnoremap <Leader>sp :set spell spelllang=en_us<CR>
 
 
 " Split navigation

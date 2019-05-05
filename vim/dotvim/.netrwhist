@@ -1,8 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/lasg/PRO4/code/RTOS'
-let g:netrw_dirhist_2='/home/lasg/PRO4/code/RTOS/src'
-let g:netrw_dirhist_3='/home/lasg/Seafile/RobTek/4. semester/REG/noter/afsnit/lektion9'
-let g:netrw_dirhist_4='/home/lasg/Seafile/RobTek/4. semester/REG/noter/afsnit'
-let g:netrw_dirhist_5='/home/lasg/Seafile/RobTek/4. semester/REG/noter'
-let g:netrw_dirhist_6='/home/lasg/dotfiles/rework'
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/lasg/PRO4/rapport'
+let g:netrw_dirhist_2='/home/lasg/PRO4/rapport/afsnit/system_implementation/FreeRTOS'
+let g:netrw_dirhist_3='/home/lasg/PRO4/rapport/afsnit/system_implementation'
+let g:netrw_dirhist_4='/home/lasg/PRO4/rapport/afsnit'
+let g:netrw_dirhist_5='/home/lasg/PRO4/rapport'
