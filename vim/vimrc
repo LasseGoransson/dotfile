@@ -89,6 +89,8 @@ noremap <Leader>sa zg
 noremap <Leader>sn ]s
 " Enable check
 nnoremap <Leader>sp :set spell spelllang=en_us<CR>
+" Quick edit
+inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
 
 " Split navigation
