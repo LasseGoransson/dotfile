@@ -106,6 +106,10 @@ bindsym --release Print exec "scrot -s 'screenshot-%Y:%m:%d:%H:%M:%S.png' -e 'mv
 # Lock screen
 bindsym $mod+l exec "notify-send 'Locking...' ;~/dotfiles/scripts/lockscreenoff.sh"
 
+# Todo vim
+bindsym  $mod+t exec "urxvt -e vim ~/Seafile/Privat/TODO/todo.tex" 
+
+
 ###### Startup programs
 
 ###### Sound control
@@ -145,8 +149,6 @@ bindsym XF86MonBrightnessDown exec "xbacklight -dec 5; notify-send 'brightness d
 # Open firefox
 bindsym $mod+w exec firefox
 
-# Open Todoist
-bindsym $mod+t exec ~/dotfiles/applications/todoist-linux-x64/todoist
 
 
 #Open display selector
