@@ -72,7 +72,17 @@ let g:tex_conceal='abdmg'
 " Set default latex type
 let g:tex_flavor = "latex"
 " Disable warnings about missing clientserver, since none is available
-let g:vimtex_compiler_latexmk = {'callback' : 0}
+"let g:vimtex_compiler_latexmk = {'callback' : 0}
+let g:vimtex_compiler_latexmk = {
+    \ 'options' : [
+    \   '-pdf',
+    \   '-shell-escape',
+    \   '-verbose',
+    \   '-file-line-error',
+    \   '-synctex=0',
+    \   '-interaction=nonstopmode',
+    \ ],
+    \}
 
 " Remaps
 nnoremap tk  :tabnext<CR>
@@ -82,17 +92,19 @@ nnoremap  <leader>q   :Explore<CR>
 
 " Spell check
 " Fix mistake
-noremap <Leader>sf z= 
+noremap <Leader>f z= 
 " Add to dict
-noremap <Leader>sa zg
+noremap <Leader>a zg
 " Next mistake
-noremap <Leader>sn ]s
+noremap <Leader>n ]s
 " Enable check
 nnoremap <Leader>sp :set spell spelllang=en_us<CR>
 " Quick edit
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
-
+" GIT
+nnoremap <leader>a :w <CR> :!git add %<CR>
+"
 " Split navigation
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -111,6 +123,9 @@ let g:UltiSnipsJumpBackwardTrigger='<c-k>'
 " Screenshot
  let @s=':read! screenshot.sh %'
 " Leader commands
+
+
+
 
 "Status line
 set laststatus=2

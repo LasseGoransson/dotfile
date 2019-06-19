@@ -1,6 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/home/lasg/PRO4/rapport'
-let g:netrw_dirhist_2='/home/lasg/PRO4/rapport/afsnit'
-let g:netrw_dirhist_3='/home/lasg/PRO4/rapport/afsnit/introduction'
-let g:netrw_dirhist_4='/home/lasg'
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/home/lasg/git/ELEF19slides'
+let g:netrw_dirhist_2='/home/lasg/git/ELEF19slides/SP2'
+let g:netrw_dirhist_3='/home/lasg/git/ELEF19slides'
+let g:netrw_dirhist_4='/home/lasg/git/EMPF19slides/sp2'
+let g:netrw_dirhist_5='/home/lasg/git/EMPF19slides'
+let g:netrw_dirhist_6='/home/lasg/git'
+let g:netrw_dirhist_7='/home/lasg'
+let g:netrw_dirhist_8='/home/lasg/.vim'
+let g:netrw_dirhist_9='/home/lasg/.vim/colors'

@@ -11,7 +11,13 @@ snippet fig "figure" bA
 \end{figure}
 endsnippet
 
-
+snippet isvg "includesvg"
+\begin{figure}[H]
+    \centering
+    \def\svgwidth{0.5\textwidth}
+    \includesvg[$0]{$1}
+\end{figure}
+endsnippet
 
 
 

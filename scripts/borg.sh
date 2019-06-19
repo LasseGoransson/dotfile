@@ -9,11 +9,9 @@ borg create --progress -v --stats --chunker-params 19,23,21,4095                
     /home                                       \
     --exclude-caches \
     --exclude '/home/*/.cache'                  \
-    --exclude '/home/*/Downloads/*'                  \
     --exclude '/home/*/.local/share/Trash/*'                  \
     --exclude '*.pyc' \
     --exclude '*Steam/*' \
-    --exclude '/home/lasg/Desktop/*' \
     --exclude '*.vdi' \
     --exclude '*.sav' 
 
