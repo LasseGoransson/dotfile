@@ -126,7 +126,6 @@ new_window none
 
 
 # Autostart applications
-exec --no-startup-id ~/dotfiles/scripts/polybar.sh
 exec --no-startup-id nm-applet
 exec --no-startup-id "sh -c 'sleep 30; seafile-applet'"
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
@@ -138,8 +137,7 @@ exec --no-startup-id i3-msg 'workspace 9; sleep 1; exec signal-desktop; sleep 1;
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id blueberry-tray
-exec_always --no-startup-id ~/dotfiles/scripts/polybar.sh
-
+exec_always --no-startup-id ~/dotfiles/scripts/polybar_all.sh 
 # Brightness Controls
 bindsym XF86MonBrightnessUp exec "xbacklight -inc 5; notify-send 'brightness up'"
 bindsym XF86MonBrightnessDown exec "xbacklight -dec 5; notify-send 'brightness down'"
