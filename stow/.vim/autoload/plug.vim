@@ -1,1 +1,1 @@
-/home/lasg/dotfiles/vim/plug.vim
+/vim/plug.vim
