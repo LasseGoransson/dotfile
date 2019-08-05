@@ -14,9 +14,9 @@ fi
 if [ $(conf status | grep "ahead" | wc -l) -eq 1 ]
 then
     #modified
-    TEXT="$TEXT ^"
+    TEXT="$TEXT / Local changes"
 else
     # not modified
-    TEXT="$TEXT ="
+    TEXT="$TEXT"
 fi
 echo -e $TEXT
