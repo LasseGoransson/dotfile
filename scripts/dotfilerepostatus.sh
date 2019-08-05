@@ -8,7 +8,7 @@ then
     TEXT="%{u#ff4b14} Dotfiles changes %{F-}"
 else
     # not modified
-   TEXT="%{u#0f0}No change"
+   TEXT="%{u#0f0}No mod"
 fi
 
 if [ $(conf status | grep "ahead" | wc -l) -eq 1 ]
