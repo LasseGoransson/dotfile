@@ -116,7 +116,7 @@ nnoremap <C-H> <C-W><C-H>
 let g:UltiSnipsSnippetsDir = "~/.vim/myUltiSnips"
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "myUltiSnips"]
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger='<leader>e'
+let g:UltiSnipsExpandTrigger='<Leader>e'
 let g:UltiSnipsJumpForwardTrigger='<c-j>'
 let g:UltiSnipsJumpBackwardTrigger='<c-k>'
 
