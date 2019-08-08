@@ -124,7 +124,7 @@ let g:UltiSnipsJumpBackwardTrigger='<c-k>'
  let @s=':read! screenshot.sh %'
 " Leader commands
 
-
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
 
 "Status line
