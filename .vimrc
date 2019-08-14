@@ -83,6 +83,7 @@ let g:vimtex_compiler_latexmk = {
     \   '-interaction=nonstopmode',
     \ ],
     \}
+let g:vimtex_quickfix_mode = 0
 
 " Remaps
 nnoremap tk  :tabnext<CR>
@@ -185,5 +186,12 @@ augroup GetGitBranch
   autocmd VimEnter,WinEnter,BufEnter * call StatuslineGitBranch()
 augroup END
 
+" first, enable status line always
+set laststatus=2
 
+" now set it up to change the status line based on mode
+if version >= 700
+  au InsertEnter * hi StatusLine term=reverse ctermbg=3 gui=undercurl guisp=Magenta
+  au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=2 gui=bold,reverse
+endif
 
