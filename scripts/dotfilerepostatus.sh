@@ -5,10 +5,10 @@ TEXT=""
 if [ $(conf status | grep "nothing to commit" | wc -l) -eq 0 ]
 then
     #modified
-    TEXT="%{u#ff4b14} Dotfiles changes %{F-}"
+    TEXT="%{B#ff4b14}   %{F-}"
 else
     # not modified
-   TEXT="%{u#0f0}No mod"
+   TEXT="%{B#0f0}No mod"
 fi
 
 if [ $(conf status | grep "ahead" | wc -l) -eq 1 ]
