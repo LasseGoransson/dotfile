@@ -11,12 +11,12 @@ else
    TEXT="%{B#0f3} "
 fi
 
-if [ $(conf push -n 2>1 | grep "Everything up-to-date" | wc -l) -eq 1 ]
-then
-    # not modified
-    TEXT="$TEXT"
-else
-    #modified
-    TEXT="%{B#ffffff}"
-fi
+#if [ $(conf push -n 2>1 | grep "Everything up-to-date" | wc -l) -eq 1 ]
+#then
+#    # not modified
+#    TEXT="$TEXT"
+#else
+#    #modified
+#    TEXT="%{B#ffffff}"
+#fi
 echo -e $TEXT
