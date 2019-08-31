@@ -11,10 +11,10 @@ else
    TEXT="%{B#0f3} "
 fi
 
-if [ $(conf status | grep "ahead" | wc -l) -eq 1 ]
+if [ $(conf push -n 2>1 | grep "Everything up-to-date" | wc -l) -eq 0 ]
 then
     #modified
-    TEXT="$TEXT / Local changes"
+    TEXT="%{B#ffff14}$TEXT"
 else
     # not modified
     TEXT="$TEXT"
