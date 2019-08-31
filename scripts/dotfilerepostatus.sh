@@ -11,7 +11,7 @@ else
    TEXT="%{B#0f3} "
 fi
 
-if [ $(conf push -n 2>1 | grep "Everything up-to-date" | wc -l) -eq 0 ]
+if [ $(conf push -n 2>1 | grep "Everything up-to-date" | wc -l) -eq 1 ]
 then
     #modified
     TEXT="%{B#ffff14}$TEXT"
