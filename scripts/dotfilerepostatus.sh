@@ -17,6 +17,6 @@ then
     TEXT="%{B#ffff14}"
 else
     # not modified
-    TEXT="$TEXT"
+    TEXT="here"
 fi
 echo -e $TEXT
