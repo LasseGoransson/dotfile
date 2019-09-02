@@ -139,8 +139,8 @@ exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id blueberry-tray
 exec_always --no-startup-id ~/scripts/polybar_all.sh 
 # Brightness Controls
-bindsym XF86MonBrightnessUp exec "xbacklight -inc 5; notify-send 'brightness up'"
-bindsym XF86MonBrightnessDown exec "xbacklight -dec 5; notify-send 'brightness down'"
+bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
+bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 
 # Customs binds
 
