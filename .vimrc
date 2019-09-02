@@ -90,6 +90,10 @@ nnoremap tj  :tabprev<CR>
 noremap  tn  :tabnew<CR>
 nnoremap  <leader>q   :Explore<CR>
 
+
+" Run python 
+nmap <leader>r <Esc>:w<CR>:!clear;python2 %<CR>
+
 " Spell check
 " Fix mistake
 noremap <Leader>f z= 
