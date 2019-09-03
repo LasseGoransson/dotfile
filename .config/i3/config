@@ -104,7 +104,7 @@ bindsym $mod+s mode "(s)hutdown, r(eboot)"
 bindsym --release Print exec "scrot -s 'screenshot-%Y:%m:%d:%H:%M:%S.png' -e 'mv $f ~/Pictures/screenshots ; notify-send $f;echo -n  ~/Pictures/screenshots/$f | xclip -selection clipboard '"
 
 # Lock screen
-bindsym $mod+l exec "notify-send 'Locking...' ;~/dotfiles/scripts/lockscreenoff.sh"
+bindsym $mod+l exec "notify-send 'Locking...' ;~/scripts/lockscreenoff.sh"
 
 # Todo vim
 bindsym  $mod+t exec "urxvt -e vim ~/Seafile/Privat/TODO/todo.tex" 
