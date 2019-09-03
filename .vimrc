@@ -90,6 +90,9 @@ nnoremap tj  :tabprev<CR>
 noremap  tn  :tabnew<CR>
 nnoremap  <leader>q   :Explore<CR>
 
+" C++ 
+nnoremap <C-c> :!clear &&test make<CR>
+
 
 " Run python 
 nmap <leader>r <Esc>:w<CR>:!clear;python2 %<CR>
