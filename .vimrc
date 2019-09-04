@@ -91,7 +91,7 @@ noremap  tn  :tabnew<CR>
 nnoremap  <leader>q   :Explore<CR>
 
 " C++ 
-nnoremap <C-c> :!clear &&test make<CR>
+nnoremap <C-c> :w<CR> <bar> :!clear && cmake . -B build &&  cmake --build build/<CR>
 
 
 " Run python 
