@@ -1,3 +1,3 @@
 
 " Run python 
-nmap <leader>r <Esc>:w<CR>:!clear;python2 %<CR>
+nmap <C-c> <Esc>:w<CR>:!clear;python2 %<CR>
