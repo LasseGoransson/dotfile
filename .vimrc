@@ -90,12 +90,8 @@ nnoremap tj  :tabprev<CR>
 noremap  tn  :tabnew<CR>
 nnoremap  <leader>q   :Explore<CR>
 
-" C++ 
-nnoremap <C-c> :w<CR> <bar> :!clear && cmake . -B build &&  cmake --build build/<CR>
 
 
-" Run python 
-nmap <leader>r <Esc>:w<CR>:!clear;python2 %<CR>
 
 " Spell check
 " Fix mistake
