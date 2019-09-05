@@ -164,3 +164,21 @@ for_window [window_role="pop-up"] floating enable
 for_window [title="float_me"] floating enable
 for_window [window_role="task_dialog"] floating enable
 
+
+
+#Note mode:
+mode "Notes" {
+    bindsym s exec urxvt -e vim /home/lasg/5sem/statistik/noter/statistik.tex, mode "default"
+    bindsym v exec urxvt -e vim /home/lasg/5sem/vis/noter/vision.tex, mode "default"
+    bindsym l exec urxvt -e vim /home/lasg/5sem/linux/noter/linux.tex, mode "default"
+    bindsym a exec urxvt -e vim /home/lasg/5sem/ai/noter/ai.tex, mode "default"
+    bindsym d exec urxvt -e vim /home/lasg/5sem/ADS/noter/ads.tex, mode "default"
+    bindsym r exec urxvt -e vim /home/lasg/5sem/rob/noter/rob.tex, mode "default"
+
+    bindsym Escape mode "default"
+}
+bindsym $mod+Shift+N mode "Notes"
+
+
+
+
