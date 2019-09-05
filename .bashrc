@@ -152,6 +152,8 @@ alias watchlatex="latexmk -pvc -pdf "
 
 alias ndmatlab="matlab -nodesktop"
 
+alias 'clipboard=xclip -selection clipboard'
+
 # GIT ALIAS
 alias status="git status "
 alias add="git add "
