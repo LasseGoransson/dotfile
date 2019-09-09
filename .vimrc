@@ -133,7 +133,6 @@ let g:UltiSnipsJumpBackwardTrigger='<c-k>'
 "Status line
 set laststatus=2
 set statusline=
-set statusline+=%{StatuslineMode()}
 set statusline+=\ 
 set statusline+=|
 set statusline+=\ 
