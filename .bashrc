@@ -112,6 +112,10 @@ shopt -s expand_aliases
 
 # Enable history appending instead of overwriting.  #139609
 shopt -s histappend
+export HISTTIMEFORMAT="%h %d %H:%M:%S "
+export HISTSIZE=10000
+export HISTFILESIZE=10000
+export PROMPT_COMMAND='history -a'
 
 #
 # # ex - archive extractor
