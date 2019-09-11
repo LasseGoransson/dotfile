@@ -5,7 +5,7 @@ TEXT=""
 if [ $(conf status | grep "nothing to commit" | wc -l) -eq 0 ]
 then
     #modified
-    TEXT="%{B#ff4b14}   %{F-}"
+    TEXT=" %{F-}"
 else
     # not modified
    TEXT="%{B#0f3} "

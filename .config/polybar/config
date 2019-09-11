@@ -12,7 +12,7 @@ alert = #bd2c40
 [bar/example]
 monitor = ${env:MONITOR:}
 width = 100%
-height = 45
+height = 55
 ;offset-x = 1%
 ;offset-y = 1%
 radius = 0.0
@@ -22,7 +22,7 @@ bottom=false
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 2
+line-size = 3
 line-color = #f00
 
 border-size = 4
@@ -34,9 +34,8 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = firecode:pixelsize=22;1
-;font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-;font-2 = siji:pixelsize=10;1
+font-0 = "FiraCode-Retina:pixelsize=24;1"
+font-1 = "Material Icons:pixelsize=25;1"
 
 modules-left = i3
 ;modules-center =
@@ -55,7 +54,7 @@ cursor-scroll = ns-resize
 [module/dotfile]
 type = custom/script
 exec = ~/scripts/dotfilerepostatus.sh
-label-padding = 5
+label-padding =0 
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:30:...%
@@ -320,30 +319,30 @@ format-discharging-underline = ${self.format-charging-underline}
 
 format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
+format-full-prefix-underline = #FF0000
 format-full-underline = ${self.format-charging-underline}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
+ramp-capacity-0 = i
+ramp-capacity-1 = u
+ramp-capacity-2 = k
 ramp-capacity-foreground = ${colors.foreground-alt}
 
-animation-charging-0 = >
-animation-charging-1 = >
-animation-charging-2 = >
+animation-charging-0 = ""
 animation-charging-foreground = ${colors.foreground-alt}
+animation-charging-underline = #FFFF00
 animation-charging-framerate = 750
 
-animation-discharging-0 = 
-animation-discharging-1 = 
-animation-discharging-2 = 
+animation-discharging-0 = 
 animation-discharging-foreground = ${colors.foreground-alt}
+animation-discharging-underline = #660000
 animation-discharging-framerate = 750
 
 ; Available tokens:
 ;   %percentage% (default)
 ;   %time%
 ;   %consumption% (shows current discharge rate in watts)
-label-discharging = %percentage%% - %time% - %consumption%W
+label-discharging = %percentage%% 
+internal=1
 
 [module/temperature]
 type = internal/temperature
