@@ -107,6 +107,9 @@ inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
 " GIT
 nnoremap <leader>a :w <CR> :!git add %<CR>
+
+nnoremap <Leader>fe :vsp ~/.vim/after/ftplugin/%:e.vim<CR> 
+
 "
 " Split navigation
 nnoremap <C-J> <C-W><C-J>
