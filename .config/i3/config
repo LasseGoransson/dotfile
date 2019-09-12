@@ -147,7 +147,7 @@ bindsym $mod+w exec firefox
 
 
 #Open display selector
-bindcode $mod+74 exec ~/dotfiles/scripts/displayselect.sh
+bindcode $mod+74 exec ~/scripts/displayselect.sh
 
 #floating_minimum_size 1200 x 1200
 #floating_maximum_size 1200 x 1200
