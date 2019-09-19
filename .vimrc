@@ -66,7 +66,7 @@ let g:vimtex_view_method = 'zathura'
 let g:livepreview_previewer = 'zathura'
 "let g:ale_completion_enabled = 1
 let g:ale_linters_explicit = 1
-
+let g:vimtex_quickfix_mode = 0
 set conceallevel=1
 let g:tex_conceal='abdmg'
 " Set default latex type
@@ -83,13 +83,15 @@ let g:vimtex_compiler_latexmk = {
     \   '-interaction=nonstopmode',
     \ ],
     \}
-let g:vimtex_quickfix_mode = 0
 
 " Remaps
 nnoremap tk  :tabnext<CR>
 nnoremap tj  :tabprev<CR>
 noremap  tn  :tabnew<CR>
 nnoremap  <leader>q   :Explore<CR>
+
+
+
 
 " Spell check
 " Fix mistake
@@ -105,6 +107,9 @@ inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
 " GIT
 nnoremap <leader>a :w <CR> :!git add %<CR>
+
+nnoremap <Leader>fe :vsp ~/.vim/after/ftplugin/%:e.vim<CR> 
+
 "
 " Split navigation
 nnoremap <C-J> <C-W><C-J>
@@ -117,7 +122,7 @@ nnoremap <C-H> <C-W><C-H>
 let g:UltiSnipsSnippetsDir = "~/.vim/myUltiSnips"
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "myUltiSnips"]
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger='<leader>e'
+let g:UltiSnipsExpandTrigger='<Leader>e'
 let g:UltiSnipsJumpForwardTrigger='<c-j>'
 let g:UltiSnipsJumpBackwardTrigger='<c-k>'
 
@@ -125,13 +130,12 @@ let g:UltiSnipsJumpBackwardTrigger='<c-k>'
  let @s=':read! screenshot.sh %'
 " Leader commands
 
-vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+
 
 
 "Status line
 set laststatus=2
 set statusline=
-set statusline+=%{StatuslineMode()}
 set statusline+=\ 
 set statusline+=|
 set statusline+=\ 
@@ -186,12 +190,5 @@ augroup GetGitBranch
   autocmd VimEnter,WinEnter,BufEnter * call StatuslineGitBranch()
 augroup END
 
-" first, enable status line always
-set laststatus=2
 
-" now set it up to change the status line based on mode
-if version >= 700
-  au InsertEnter * hi StatusLine term=reverse ctermbg=3 gui=undercurl guisp=Magenta
-  au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=2 gui=bold,reverse
-endif
 
