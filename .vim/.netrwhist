@@ -1,3 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =1
-let g:netrw_dirhist_1='/home/lasg/.config/dunst'
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/lasg/.vim/after/ftplugin'
+let g:netrw_dirhist_3='/home/lasg/.vim/after'
+let g:netrw_dirhist_2='/home/lasg/.vim'
+let g:netrw_dirhist_1='/home/lasg'
+let g:netrw_dirhist_0='/home/lasg/Seafile'
+let g:netrw_dirhist_9='/home/lasg/Seafile/RobTek'
+let g:netrw_dirhist_8='/home/lasg/Seafile/RobTek/5semester'
+let g:netrw_dirhist_7='/home/lasg/Seafile/RobTek/5semester/vis'
+let g:netrw_dirhist_6='/home/lasg/Seafile/RobTek/5semester/vis/exercises'
+let g:netrw_dirhist_5='/home/lasg/Seafile/RobTek/5semester/vis/exercises/exercise2'
