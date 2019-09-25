@@ -22,7 +22,7 @@ bottom=false
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 4
+line-size = 2
 line-color = #f00
 
 border-size = 4
@@ -43,7 +43,7 @@ modules-right = dotfile pulseaudio wlan battery date
 
 tray-position = right
 tray-padding = 2
-tray-maxsize = 55
+tray-maxsize = 1000
 dpi = 192
 
 ;tray-background = #0063ff
