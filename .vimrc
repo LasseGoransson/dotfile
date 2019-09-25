@@ -108,7 +108,12 @@ inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 " GIT
 nnoremap <leader>a :w <CR> :!git add %<CR>
 
+" Edit type commands
 nnoremap <Leader>fe :vsp ~/.vim/after/ftplugin/%:e.vim<CR> 
+
+ 
+" Yank visual to clipboard
+vnoremap <Leader>y :w !xclip -selection clipboard<CR><CR>
 
 "
 " Split navigation

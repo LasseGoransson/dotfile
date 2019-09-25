@@ -5,5 +5,3 @@ inoremap <C-c> <Esc> :wa <CR> :!clear && cmake . -B build &&  cmake --build buil
 
 nnoremap <Leader>r :!clear && ./build/project<CR>
 
-" Yank visual to clipboard
-vnoremap <Leader>y :w !xclip -selection clipboard<CR><CR>
