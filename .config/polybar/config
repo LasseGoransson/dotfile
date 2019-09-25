@@ -12,7 +12,7 @@ alert = #bd2c40
 [bar/example]
 monitor = ${env:MONITOR:}
 width = 100%
-height = 55
+height = 40
 ;offset-x = 1%
 ;offset-y = 1%
 radius = 0.0
@@ -22,7 +22,7 @@ bottom=false
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 3
+line-size = 4
 line-color = #f00
 
 border-size = 4
@@ -34,8 +34,8 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = "FiraCode-Retina:pixelsize=24;1"
-font-1 = "Material Icons:pixelsize=25;1"
+font-0 = "FiraCode-Retina:pixelsize=12;1"
+font-1 = "Material Icons:pixelsize=12;1"
 
 modules-left = i3
 ;modules-center =
@@ -43,6 +43,9 @@ modules-right = dotfile pulseaudio wlan battery date
 
 tray-position = right
 tray-padding = 2
+tray-maxsize = 55
+dpi = 192
+
 ;tray-background = #0063ff
 
 
