@@ -365,7 +365,7 @@ margin-bottom = 5
 [bar/example]
 monitor = ${env:MONITOR:}
 width = 100%
-height = 50
+height = 20
 ;offset-x = 1%
 ;offset-y = 1%
 radius = 0.0
@@ -387,8 +387,8 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = "FiraCode-Retina:pixelsize=11;1"
-font-1 = "Material Icons:pixelsize=16;1"
+font-0 = "FiraCode-Retina:pixelsize=12;1"
+font-1 = "Material Icons:pixelsize=12;1"
 
 modules-left = i3
 ;modules-center =
@@ -397,7 +397,7 @@ modules-right = dotfile pulseaudio wlan battery date
 tray-position = right
 tray-padding = 2
 tray-maxsize = 1000
-dpi = 192
+dpi = 92
 
 cursor-click = pointer
 cursor-scroll = ns-resize
