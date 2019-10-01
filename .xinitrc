@@ -63,5 +63,5 @@ get_session(){
 	echo "dbus-launch ${dbus_args[*]}"
 }
 
-setxkbmap -option caps:escape
+setxkbmap -option caps:escape # Swap Caps lock with ESC
 exec $(get_session)
