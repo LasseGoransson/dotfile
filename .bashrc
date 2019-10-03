@@ -164,7 +164,7 @@ alias add="git add "
 alias commit="git commit "
 
 alias conf='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME' 
-
+alias confsave='conf commit -am "changes" && conf push'
 # Vim Stuff
 #xmodmap .xmodmap > /dev/null 2>&1
 #xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
