@@ -171,3 +171,11 @@ alias confsave='conf commit -am "changes" && conf push'
 setxkbmap -option caps:escape
 source /usr/share/gazebo/setup.sh
 alias build="cmake -B build/ && cmake --build build/"
+
+zat()
+{
+zathura "$1" &
+sleep 1 && exit
+}
+
+
