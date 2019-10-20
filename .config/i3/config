@@ -101,7 +101,7 @@ bindsym Escape mode "default"
 bindsym $mod+s mode "(s)hutdown, r(eboot)"
 
 # Print screen
-bindsym --release Print exec "scrot -s 'screenshot-%Y_%m_%d_%H_%M_%S.png' -e 'mv $f ~/Pictures/screenshots ; notify-send $f;echo -n  ~/Pictures/screenshots/$f | xclip -selection clipboard '"
+bindsym --release Print exec "scrot -s 'screenshot-%Y_%m_%d_%H_%M_%S.png' -e 'mv $f ~/Pictures/screenshots/ ; notify-send $f;echo -n  ~/Pictures/screenshots/$f | xclip -selection clipboard '"
 
 # Lock screen
 bindsym $mod+l exec "notify-send 'Locking...' ;~/scripts/lockscreenoff.sh"
@@ -115,7 +115,7 @@ bindsym XF86AudioLowerVolume exec "amixer -D pulse sset Master '1%-'"
 bindsym XF86AudioMute exec "amixer -D pulse set Master toggle"
 
 # Gaps
-gaps inner 10
+gaps inner 5
 gaps outer 0
 smart_gaps on
 new_window none
@@ -126,7 +126,7 @@ new_window none
 exec --no-startup-id nm-applet
 exec --no-startup-id "sh -c 'sleep 30; seafile-applet'"
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id nitrogen --restore; sleep 1; compton -b
+exec --no-startup-id nitrogen --restore;
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
 exec --no-startup-id ~/scripts/startup.sh
@@ -163,7 +163,7 @@ bindsym $mod+Shift+space floating toggle
 for_window [window_role="pop-up"] floating enable
 for_window [title="float_me"] floating enable
 for_window [window_role="task_dialog"] floating enable
-
+for_window [title="Gazebo"] floating enable
 
 #Note mode:
 mode "Notes" {
