@@ -165,7 +165,6 @@ for_window [title="float_me"] floating enable
 for_window [window_role="task_dialog"] floating enable
 
 
-
 #Note mode:
 mode "Notes" {
     bindsym s exec urxvt -e vim /home/lasg/5sem/statistik/noter/statistik.tex, mode "default"
@@ -179,6 +178,14 @@ mode "Notes" {
 }
 bindsym $mod+Shift+N mode "Notes"
 
+
+
+
+exec --no-startup-id ~/.screenlayout/default.sh
+
+workspace 1 output DVI-I-1
+workspace 2 output DVI-D-0
+workspace 3 output HDMI-0
 
 
 

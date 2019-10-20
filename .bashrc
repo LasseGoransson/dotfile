@@ -170,3 +170,4 @@ alias confsave='conf commit -am "changes" && conf push'
 #xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 setxkbmap -option caps:escape
 source /usr/share/gazebo/setup.sh
+alias build="cmake -B build/ && cmake --build build/"
