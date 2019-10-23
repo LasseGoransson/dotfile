@@ -101,7 +101,7 @@ bindsym Escape mode "default"
 bindsym $mod+s mode "(s)hutdown, r(eboot)"
 
 # Print screen
-bindsym --release Print exec "scrot -s 'screenshot-%Y_%m_%d_%H_%M_%S.png' -e 'mv $f ~/Pictures/screenshots/ ; notify-send $f;echo -n  ~/Pictures/screenshots/$f | xclip -selection clipboard '"
+bindsym --release Print exec "scrot -s 'screenshot-%Y_%m_%d_%H_%M_%S.png' -e 'mv $f ~/Pictures/screenshots ; notify-send $f;echo -n  ~/Pictures/screenshots/$f | xclip -selection clipboard '"
 
 # Lock screen
 bindsym $mod+l exec "notify-send 'Locking...' ;~/scripts/lockscreenoff.sh"
@@ -163,7 +163,7 @@ bindsym $mod+Shift+space floating toggle
 for_window [window_role="pop-up"] floating enable
 for_window [title="float_me"] floating enable
 for_window [window_role="task_dialog"] floating enable
-for_window [title="Gazebo"] floating enable
+
 
 #Note mode:
 mode "Notes" {
@@ -178,14 +178,6 @@ mode "Notes" {
 }
 bindsym $mod+Shift+N mode "Notes"
 
-
-
-
-exec --no-startup-id ~/.screenlayout/default.sh
-
-workspace 1 output DVI-I-1
-workspace 2 output DVI-D-0
-workspace 3 output HDMI-0
 
 
 

@@ -178,4 +178,11 @@ zathura "$1" &
 sleep 1 && exit
 }
 
+gaze()
+{
+tmux new -d -s "gazebo" 'sudo bash -c "cd /home/lasg/procode/gazeboProject; ./gazebo_client.sh; bash" ' \; split-window -d  'bash -c "cd /home/lasg/procode/gazeboProject; ./gazebo_server.sh bigworld.world; bash" '\;  attach\;
+}
 
+
+
+eval "$(thefuck --alias)"

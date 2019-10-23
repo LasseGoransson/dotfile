@@ -163,7 +163,6 @@ bindsym $mod+Shift+space floating toggle
 for_window [window_role="pop-up"] floating enable
 for_window [title="float_me"] floating enable
 for_window [window_role="task_dialog"] floating enable
-for_window [title="Gazebo"] floating enable
 
 
 #Note mode:
