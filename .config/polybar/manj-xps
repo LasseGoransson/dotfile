@@ -28,7 +28,7 @@ font-1 = "Material Icons:pixelsize=16;1"
 
 modules-left = i3
 ;modules-center =
-modules-right = dotfile pulseaudio wlan battery date
+modules-right = xbacklight guv system-cpu-frequency  dotfile pulseaudio wlan battery date
 
 tray-position = right
 tray-padding = 2

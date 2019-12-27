@@ -158,6 +158,9 @@ alias ndmatlab="matlab -nodesktop"
 
 alias 'clipboard=xclip -selection clipboard'
 
+alias  "cpu-per=sudo cpupower frequency-set -g performance"
+alias  "cpu-save=sudo cpupower frequency-set -g powersave"
+
 # GIT ALIAS
 alias status="git status "
 alias add="git add "
@@ -182,7 +185,5 @@ gaze()
 {
 tmux new -d -s "gazebo" 'sudo bash -c "cd /home/lasg/procode/gazeboProject; ./gazebo_client.sh; bash" ' \; split-window -d  'bash -c "cd /home/lasg/procode/gazeboProject; ./gazebo_server.sh bigworld.world; bash" '\;  attach\;
 }
-
-
 
 eval "$(thefuck --alias)"
