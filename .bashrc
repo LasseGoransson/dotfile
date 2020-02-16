@@ -186,3 +186,4 @@ tmux new -d -s "gazebo" 'sudo bash -c "cd /home/lasg/procode/gazeboProject; ./ga
 }
 
 eval "$(thefuck --alias)"
+alias swin="vboxmanage startvm Windows && exit"

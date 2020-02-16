@@ -65,3 +65,4 @@ get_session(){
 
 setxkbmap -option caps:escape # Swap Caps lock with ESC
 exec $(get_session)
+xset r rate 660 25
