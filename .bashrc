@@ -165,6 +165,7 @@ alias  "cpu-save=sudo cpupower frequency-set -g powersave"
 alias status="git status "
 alias add="git add "
 alias commit="git commit "
+alias pull="git pull"
 
 alias conf='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME' 
 alias confsave='conf commit -am "changes" && conf push'
