@@ -179,3 +179,4 @@ sleep 1 && exit
 }
 
 
+alias ta="tmux attach -t"

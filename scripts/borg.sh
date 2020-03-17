@@ -1,6 +1,6 @@
 #!/bin/sh
 
-REPOSITORY=root@borg.lan:xps15
+REPOSITORY=root@backup.lan:borg/laptop
 
 
 # Backup all of /home and /var/www except a few

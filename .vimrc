@@ -43,6 +43,7 @@ set encoding=utf-8
 set number
 set relativenumber
 set splitright
+set splitbelow
 
 filetype plugin indent on
 " show existing tab with 4 spaces width
