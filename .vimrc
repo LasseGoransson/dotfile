@@ -7,6 +7,8 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'arcticicestudio/nord-vim'
 
+Plug 'jdsimcoe/abstract.vim'
+
 
 " Allows sending text to other windows
 Plug 'jpalardy/vim-slime'
@@ -27,14 +29,14 @@ Plug 'honza/vim-snippets'
 
 Plug 'vim-scripts/vim-auto-save'
 
-Plug 'puremourning/vimspector'
+" Plug 'puremourning/vimspector'
 
 Plug 'rhysd/vim-grammarous'
 
 call plug#end()
 
 " Colors section
-colorscheme nord
+colorscheme delek
 
 
 " Settings
