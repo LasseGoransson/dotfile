@@ -34,7 +34,8 @@ Plug 'rhysd/vim-grammarous'
 call plug#end()
 
 " Colors section
-colorscheme nord
+" colorscheme nord
+colorscheme delek
 
 
 " Settings
@@ -81,6 +82,7 @@ let g:tex_flavor = "latex"
 let g:vimtex_compiler_latexmk = {
     \ 'options' : [
     \   '-pdf',
+    \   'build_dir' : 'out',  
     \   '-shell-escape',
     \   '-verbose',
     \   '-file-line-error',
@@ -107,8 +109,6 @@ noremap <Leader>a zg
 noremap <Leader>n ]s
 " Enable check
 nnoremap <Leader>sp :set spell spelllang=en_us<CR>
-" Quick edit
-inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
 " GIT
 "nnoremap <leader>a :w <CR> :!git add %<CR>
@@ -120,7 +120,6 @@ nnoremap <Leader>fe :vsp ~/.vim/after/ftplugin/%:e.vim<CR>
 " Yank visual to clipboard
 vnoremap <Leader>y :w !xclip -selection clipboard<CR><CR>
 
-"
 " Split navigation
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
