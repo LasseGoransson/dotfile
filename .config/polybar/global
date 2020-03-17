@@ -9,6 +9,19 @@ primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
 
+[module/system-cpu-frequency]
+type = custom/script
+exec = ~/scripts/system-cpu-frequency.sh
+interval = 1
+
+[module/guv]
+type= custom/script
+exec = "cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor | head -n 1"
+#click-left = "sudo cpupower frequency-set -g performance"
+click-left = "echo test"
+click-right = " sudo cpupower frequency-set -g powersave"
+interval = 1
+
 [module/dotfile]
 type = custom/script
 exec = ~/scripts/dotfilerepostatus.sh

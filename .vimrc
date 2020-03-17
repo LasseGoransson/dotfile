@@ -27,6 +27,10 @@ Plug 'honza/vim-snippets'
 
 Plug 'vim-scripts/vim-auto-save'
 
+Plug 'puremourning/vimspector'
+
+Plug 'rhysd/vim-grammarous'
+
 call plug#end()
 
 " Colors section
@@ -107,7 +111,7 @@ nnoremap <Leader>sp :set spell spelllang=en_us<CR>
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
 " GIT
-nnoremap <leader>a :w <CR> :!git add %<CR>
+"nnoremap <leader>a :w <CR> :!git add %<CR>
 
 " Edit type commands
 nnoremap <Leader>fe :vsp ~/.vim/after/ftplugin/%:e.vim<CR> 
@@ -136,7 +140,8 @@ let g:UltiSnipsJumpBackwardTrigger='<c-k>'
  let @s=':read! screenshot.sh %'
 " Leader commands
 
-
+" Vim spector
+let g:vimspector_enable_mappings = 'HUMAN'
 
 
 "Status line
@@ -195,6 +200,11 @@ augroup GetGitBranch
   autocmd!
   autocmd VimEnter,WinEnter,BufEnter * call StatuslineGitBranch()
 augroup END
+
+set completeopt-=preview
+
+
+nmap <F5> <Plug>(grammarous-move-to-next-error)
 
 
 

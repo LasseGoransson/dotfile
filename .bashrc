@@ -158,10 +158,14 @@ alias ndmatlab="matlab -nodesktop"
 
 alias 'clipboard=xclip -selection clipboard'
 
+alias  "cpu-per=sudo cpupower frequency-set -g performance"
+alias  "cpu-save=sudo cpupower frequency-set -g powersave"
+
 # GIT ALIAS
 alias status="git status "
 alias add="git add "
 alias commit="git commit "
+alias pull="git pull"
 
 alias conf='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME' 
 alias confsave='conf commit -am "changes" && conf push'
@@ -169,7 +173,7 @@ alias confsave='conf commit -am "changes" && conf push'
 #xmodmap .xmodmap > /dev/null 2>&1
 #xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 setxkbmap -option caps:escape
-source /usr/share/gazebo/setup.sh
+
 alias build="cmake -B build/ && cmake --build build/"
 
 zat()
@@ -178,5 +182,10 @@ zathura "$1" &
 sleep 1 && exit
 }
 
+gaze()
+{
+tmux new -d -s "gazebo" 'sudo bash -c "cd /home/lasg/procode/gazeboProject; ./gazebo_client.sh; bash" ' \; split-window -d  'bash -c "cd /home/lasg/procode/gazeboProject; ./gazebo_server.sh bigworld.world; bash" '\;  attach\;
+}
 
-alias ta="tmux attach -t"
+eval "$(thefuck --alias)"
+alias swin="vboxmanage startvm Windows && exit"
