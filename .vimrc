@@ -7,6 +7,8 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'arcticicestudio/nord-vim'
 
+Plug 'jdsimcoe/abstract.vim'
+
 
 " Allows sending text to other windows
 Plug 'jpalardy/vim-slime'
@@ -27,14 +29,13 @@ Plug 'honza/vim-snippets'
 
 Plug 'vim-scripts/vim-auto-save'
 
-Plug 'puremourning/vimspector'
+" Plug 'puremourning/vimspector'
 
 Plug 'rhysd/vim-grammarous'
 
 call plug#end()
 
 " Colors section
-" colorscheme nord
 colorscheme delek
 
 
@@ -48,7 +49,6 @@ set encoding=utf-8
 set number
 set relativenumber
 set splitright
-set splitbelow
 
 filetype plugin indent on
 " show existing tab with 4 spaces width
@@ -108,6 +108,8 @@ noremap <Leader>a zg
 noremap <Leader>n ]s
 " Enable check
 nnoremap <Leader>sp :set spell spelllang=en_us<CR>
+" Quick edit
+inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
 " GIT
 "nnoremap <leader>a :w <CR> :!git add %<CR>
@@ -119,6 +121,7 @@ nnoremap <Leader>fe :vsp ~/.vim/after/ftplugin/%:e.vim<CR>
 " Yank visual to clipboard
 vnoremap <Leader>y :w !xclip -selection clipboard<CR><CR>
 
+"
 " Split navigation
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
