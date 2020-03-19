@@ -91,6 +91,7 @@ fi
 unset use_color safe_term match_lhs sh
 
 alias cp="cp -i"                          # confirm before overwriting something
+alias ls="ls -1"
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 alias np='nano -w PKGBUILD'
@@ -187,5 +188,4 @@ gaze()
 tmux new -d -s "gazebo" 'sudo bash -c "cd /home/lasg/procode/gazeboProject; ./gazebo_client.sh; bash" ' \; split-window -d  'bash -c "cd /home/lasg/procode/gazeboProject; ./gazebo_server.sh bigworld.world; bash" '\;  attach\;
 }
 
-eval "$(thefuck --alias)"
 alias swin="vboxmanage startvm Windows && exit"
