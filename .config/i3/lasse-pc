@@ -1,8 +1,0 @@
-exec --no-startup-id ~/.screenlayout/default.sh
-
-workspace 1 output DVI-I-1
-workspace 2 output DVI-D-0
-workspace 3 output HDMI-0
-
-
-
