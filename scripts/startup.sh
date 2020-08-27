@@ -1,4 +1,4 @@
-i3-msg 'workspace 9; exec signal-desktop-beta'
+i3-msg 'workspace 9; exec signal-desktop'
 sleep 2
 i3-msg 'workspace 10; exec spotify'
 sleep 2

@@ -26,9 +26,9 @@ Plug 'honza/vim-snippets'
 
 Plug 'vim-scripts/vim-auto-save'
 
-" Plug 'puremourning/vimspector'
 
 Plug 'rhysd/vim-grammarous'
+
 
 call plug#end()
 
@@ -46,6 +46,7 @@ set encoding=utf-8
 set number
 set relativenumber
 set splitright
+set t_Co=256
 
 filetype plugin indent on
 " show existing tab with 4 spaces width

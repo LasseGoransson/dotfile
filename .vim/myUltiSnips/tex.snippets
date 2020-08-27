@@ -74,14 +74,23 @@ endsnippet
 # Section and subsection
 
 snippet sec "Section" bA 
-\section*{$1}
+\section{$1}
 endsnippet
 
 snippet ssec "Subsection" bA 
-\subsection*{$1}
+\subsection{$1}
 endsnippet
+
 snippet sssec "SubSubSection" bA 
-\subsubsection*{$1}
+\subsubsection{$1}
+endsnippet
+
+snippet lec "Lection" 
+
+\lec{$1} 
+
+$0
+
 endsnippet
 
 # Subscript 
@@ -121,48 +130,29 @@ snip.rv = eval('latex(' + match.group(1).replace('\\', '') \
 `
 endsnippet
 
-
-# Latex template
-snippet textem "LaTeX Template" bA 
-
-\documentclass[a4paper,11pt]{article}
-\usepackage[headheight=14pt, top=0.5cm, bottom=0.5cm, left=.5cm, right=.5cm]{geometry}
-\usepackage{graphicx}
-\usepackage{amsmath}
-\usepackage{tikz}
-\usepackage{float}
-\usepackage{transparent}
-\usepackage{xifthen}
-\usepackage{import}
-\usepackage[final]{pdfpages}
-\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
-\setboolean{@twoside}{false}
-\pdfminorversion=7
-\setlength\parindent{0pt}
-
-\newcommand{\incfig}[1]{%
-    \def\svgwidth{\columnwidth}
-    \import{./figures/}{#1.pdf_tex}
-}
-
-\begin{document}
-\title{$1}
-\date{}
-\maketitle
-\vspace{-2cm}
-
-
-$2
-
-
-
-\end{document}
-endsnippet
-
 priority 1000
 snippet int
 \int_{$1}^{$2}$0
 endsnippet
+
+
+# Latex template
+snippet textem "LaTeX Template" bA 
+
+\documentclass{article}
+\usepackage{commonnote} % own package in ~/texmf
+
+\begin{document}
+\title{Course Name \\\ \normalsize{Fall 2020 - SDU}}
+\date{}
+\maketitle
+
+$0
+
+\end{document}
+
+endsnippet
+
 
 
 
