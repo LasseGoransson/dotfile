@@ -81,6 +81,7 @@ let g:vimtex_compiler_latexmk = {
     \ 'options' : [
     \   '-pdf',
     \   '-shell-escape',
+    \   '-output-directory=build/',
     \   '-verbose',
     \   '-file-line-error',
     \   '-synctex=0',
