@@ -68,6 +68,7 @@ let maplocalleader= "-"
 " Latex setup
 let g:vimtex_view_method = 'zathura'
 let g:livepreview_previewer = 'zathura'
+let g:vimtex_view_automatic=0
 "let g:ale_completion_enabled = 1
 let g:ale_linters_explicit = 1
 let g:vimtex_quickfix_mode = 0
@@ -81,7 +82,6 @@ let g:vimtex_compiler_latexmk = {
     \ 'options' : [
     \   '-pdf',
     \   '-shell-escape',
-    \   '-output-directory=build/',
     \   '-verbose',
     \   '-file-line-error',
     \   '-synctex=0',
