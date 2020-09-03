@@ -33,7 +33,7 @@ Plug 'rhysd/vim-grammarous'
 call plug#end()
 
 " Colors section
-colorscheme eighties
+colorscheme forest-night
 
 
 " Settings
