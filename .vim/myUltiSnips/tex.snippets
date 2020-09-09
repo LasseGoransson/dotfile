@@ -4,19 +4,19 @@ snippet beg "begin{} / end{}"
 \end{$1}
 endsnippet
 
-#snippet fig "figure" bA
-#\begin{figure}[H]
-#\includegraphics[scale=0.3]{`
+snippet fig "figure" 
+\begin{figure}[H]
+\includegraphics[scale=0.3]{`
 
-#!/bin/bash
+!/bin/bash
 
-#cd $(dirname $1)
-#mkdir -p images/
-#scrot -s 'screenshot-%Y_%m_%d_%H_%M_%S.png' -e 'mv $f images/; echo images/$f';
+cd ~/sem/rovi/vision/
+mkdir -p images/
+scrot -s 'screenshot-%Y_%m_%d_%H_%M_%S.png' -e 'mv $f images/; echo images/$f';
 
-#`}
-#\end{figure}
-#endsnippet
+`}
+\end{figure}
+endsnippet
 
 
 
