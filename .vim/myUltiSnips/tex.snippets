@@ -29,6 +29,7 @@ if snip.c == "":
 
 	os.system("import "+filepath)
 	snip += r"\begin{figure}[H]"
+	snip += r"\centering"
 	snip += r"\includegraphics[scale=0.3]{" + filepath + "}"
 	snip += "\end{figure}"
 
