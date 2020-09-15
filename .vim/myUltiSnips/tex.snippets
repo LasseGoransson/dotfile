@@ -4,22 +4,36 @@ snippet beg "begin{} / end{}"
 \end{$1}
 endsnippet
 
-snippet fig "figure" 
-\begin{figure}[H]
-\includegraphics[scale=0.3]{`
+snippet scr "screenshot figure"
+`!p
+if snip.c == "":
+	import os
+	import re
+	path = vim.eval('expand("%:p:h")')
+	os.chdir(path)
+	if not os.path.exists("images"):
+		os.mkdir("images")
+	files = os.listdir("images")
+	if(len(files) == 0):
+		num = 1
+	else:
+		files = " ".join(files)
+		files = re.findall('\d+\.png',files)
+		files = " ".join(files)
+		files = re.findall('\d+',files)
+		nums = [ int(i) for i in files ]
+		nums.sort()
+		num = nums[-1]
+		num += 1
+	filepath ="images/"+str(num)+".png"
 
-!/bin/bash
+	os.system("import "+filepath)
+	snip += r"\begin{figure}[H]"
+	snip += r"\includegraphics[scale=0.3]{" + filepath + "}"
+	snip += "\end{figure}"
 
-cd ~/sem/rovi/vision/
-mkdir -p images/
-scrot -s 'screenshot-%Y_%m_%d_%H_%M_%S.png' -e 'mv $f images/; echo images/$f';
-
-`}
-\end{figure}
+`
 endsnippet
-
-
-
 
 
 snippet isvg "includesvg"
@@ -44,9 +58,13 @@ else:
 endsnippet
 
 snippet dm "Math" wA
-\[
+
+\begin{align*}
+
 $1
-\] $0
+
+\end{align*}
+$0
 endsnippet
 
 
