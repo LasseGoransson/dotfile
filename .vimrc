@@ -89,6 +89,9 @@ let g:vimtex_compiler_latexmk = {
     \ ],
     \}
 
+let g:ycm_collect_identifiers_from_tags_files = 1
+
+
 " Remaps
 nnoremap tk  :tabnext<CR>
 nnoremap tj  :tabprev<CR>
