@@ -113,12 +113,6 @@ inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 " GIT
 "nnoremap <leader>a :w <CR> :!git add %<CR>
 
-" Edit type commands
-nnoremap <Leader>fe :vsp ~/.vim/after/ftplugin/%:e.vim<CR> 
-
- 
-" Yank visual to clipboard
-vnoremap <Leader>y :w !xclip -selection clipboard<CR><CR>
 
 "
 " Split navigation
@@ -141,6 +135,15 @@ let g:UltiSnipsJumpBackwardTrigger='<c-k>'
 " Leader commands
 
 
+" Edit type commands
+nnoremap <Leader>fe :vsp ~/.vim/after/ftplugin/%:e.vim<CR> 
+
+" Open h file matching cpp file
+nnoremap <Leader>h :vsp %:p:r.h <CR>
+
+ 
+" Yank visual to clipboard
+vnoremap <Leader>y :w !xclip -selection clipboard<CR><CR>
 
 
 
