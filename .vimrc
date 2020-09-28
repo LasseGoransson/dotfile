@@ -148,6 +148,7 @@ nnoremap <Leader>h :vsp %:p:r.h <CR>
 " Yank visual to clipboard
 vnoremap <Leader>y :w !xclip -selection clipboard<CR><CR>
 
+noremap <Leader>c ggVG='' 
 
 
 
