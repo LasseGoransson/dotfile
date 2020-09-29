@@ -4,38 +4,42 @@ snippet beg "begin{} / end{}"
 \end{$1}
 endsnippet
 
-snippet scr "screenshot figure"
+snippet "scr (\S.*\S)" "screenshot figure with name" wr
 `!p
 if snip.c == "":
 	import os
 	import re
 	path = vim.eval('expand("%:p:h")')
 	os.chdir(path)
+	
+	imgName = match.group(1)
+	fileName = re.sub('\s','-',imgName)
+	fileExt = '.png'
+	num = 1
+
 	if not os.path.exists("images"):
 		os.mkdir("images")
-	files = os.listdir("images")
-	if(len(files) == 0):
-		num = 1
-	else:
-		files = " ".join(files)
-		files = re.findall('\d+\.png',files)
-		files = " ".join(files)
-		files = re.findall('\d+',files)
-		nums = [ int(i) for i in files ]
-		nums.sort()
-		num = nums[-1]
-		num += 1
-	filepath ="images/"+str(num)+".png"
 
-	os.system("import "+filepath)
+	if not os.path.exists("images/" + fileName+fileExt):
+		totalName = "images/" + fileName+fileExt
+	else:
+		while os.path.exists("images/" + fileName+"-"+str(num)+fileExt):
+			num += 1
+		totalName = "images/" + fileName+"-"+str(num)+fileExt
+
+
+	os.system("import " + totalName)
 	snip += r"\begin{figure}[H]"
+	snip >> 1
 	snip += r"\centering"
-	snip += r"\includegraphics[scale=0.3]{" + filepath + "}"
-	snip += "\end{figure}"
+	snip += r"\includegraphics[width=0.8\textwidth]{" + totalName + "}"
+	snip += r'\caption{' + imgName + r'}'
+	snip += r'\label{fig:' + fileName + r'}'
+	snip << 1
+	snip += r"\end{figure}"
 
 `
 endsnippet
-
 
 snippet isvg "includesvg"
 \begin{figure}[H]
