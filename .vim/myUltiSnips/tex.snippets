@@ -199,4 +199,32 @@ snippet pdf "pdf import" b
 $0
 endsnippet
 
+snippet "notePDF (.*)" "Add pdf pages with text underneith" wr
+`!p
+import subprocess as sp
+cmd = "pdfinfo " + match.group(1) + r" | sed -nE 's/Pages:\s+([0-9]+)/\1/p'"
+pages = int(sp.check_output(cmd,shell=True))
 
+for p in range(1,pages+1):
+	if(p != 1):
+		snip += r"\newpage"
+	snip += r"\begin{figure}[h]"
+	snip >> 1
+	snip += r"\makebox[\textwidth][c]{"
+	snip >> 1
+	snip += r"\centering"
+	snip += r"\includegraphics[page="+str(p)+r",width=\pagewidth]{"+match.group(1)+"}"
+	snip << 1
+	snip += r"}"
+	snip += r"\makebox[\textwidth][c]{"
+	snip >> 1
+	snip += r"\rule{\pagewidth}{0.01pt}"
+	snip << 1
+	snip += r"}"
+	snip << 1
+	snip += r"\end{figure}"
+	snip += r""
+	snip += r""
+	snip += r""
+`
+endsnippet
