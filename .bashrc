@@ -245,3 +245,11 @@ function parse_git_dirty {
 }
 
 export PS1="\u@\h:\W:\`parse_git_branch\` "
+export GDK_DPI_SCALE=0.5
+md () { mkdir -p "$@" && cd "$1"; }
+
+#ROBWORK#
+export RW_ROOT=~/RobWork/RobWork/
+export RWS_ROOT=~/RobWork/RobWorkStudio/
+export RWHW_ROOT=~/RobWork/RobWorkHardware/
+export RWSIM_ROOT=~/RobWork/RobWorkSim/
