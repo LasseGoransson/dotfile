@@ -125,6 +125,7 @@ new_window none
 # Autostart applications
 exec --no-startup-id nm-applet
 exec --no-startup-id "sh -c 'sleep 30; seafile-applet'"
+exec --no-startup-id "sh -c 'sleep 30; seadrive-gui'"
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore;
 exec --no-startup-id xfce4-power-manager

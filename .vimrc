@@ -5,8 +5,6 @@
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
-Plug 'arcticicestudio/nord-vim'
-
 Plug 'jdsimcoe/abstract.vim'
 
 
@@ -19,7 +17,6 @@ Plug 'lervag/vimtex'
 " YouCompleteMe
 Plug 'Valloric/YouCompleteMe'
 
-
 " Track the engine.
 Plug 'SirVer/ultisnips'
 
@@ -29,14 +26,14 @@ Plug 'honza/vim-snippets'
 
 Plug 'vim-scripts/vim-auto-save'
 
-" Plug 'puremourning/vimspector'
 
 Plug 'rhysd/vim-grammarous'
+
 
 call plug#end()
 
 " Colors section
-colorscheme delek
+colorscheme forest-night
 
 
 " Settings
@@ -49,6 +46,7 @@ set encoding=utf-8
 set number
 set relativenumber
 set splitright
+set t_Co=256
 
 filetype plugin indent on
 " show existing tab with 4 spaces width
@@ -70,6 +68,7 @@ let maplocalleader= "-"
 " Latex setup
 let g:vimtex_view_method = 'zathura'
 let g:livepreview_previewer = 'zathura'
+let g:vimtex_view_automatic=0
 "let g:ale_completion_enabled = 1
 let g:ale_linters_explicit = 1
 let g:vimtex_quickfix_mode = 0
@@ -89,6 +88,9 @@ let g:vimtex_compiler_latexmk = {
     \   '-interaction=nonstopmode',
     \ ],
     \}
+
+let g:ycm_collect_identifiers_from_tags_files = 1
+
 
 " Remaps
 nnoremap tk  :tabnext<CR>
@@ -114,12 +116,6 @@ inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 " GIT
 "nnoremap <leader>a :w <CR> :!git add %<CR>
 
-" Edit type commands
-nnoremap <Leader>fe :vsp ~/.vim/after/ftplugin/%:e.vim<CR> 
-
- 
-" Yank visual to clipboard
-vnoremap <Leader>y :w !xclip -selection clipboard<CR><CR>
 
 "
 " Split navigation
@@ -141,71 +137,18 @@ let g:UltiSnipsJumpBackwardTrigger='<c-k>'
  let @s=':read! screenshot.sh %'
 " Leader commands
 
-" Vim spector
-let g:vimspector_enable_mappings = 'HUMAN'
 
+" Edit type commands
+nnoremap <Leader>fe :vsp ~/.vim/after/ftplugin/%:e.vim<CR> 
 
-"Status line
-set laststatus=2
-set statusline=
-set statusline+=\ 
-set statusline+=|
-set statusline+=\ 
-set statusline+=%{b:gitbranch}
-set statusline+=\ 
-set statusline+=|
-set statusline+=\ 
-set statusline+=%k
-set statusline+=%=
-set statusline+=%m
-set statusline+=%f
-set statusline+=%y
+" Open h file matching cpp file
+nnoremap <Leader>h :vsp %:p:r.h <CR>
 
-function! StatuslineMode()
-  let l:mode=mode()
-  if l:mode==#"n"
-    return "NORMAL"
-  elseif l:mode==?"v"
-    return "VISUAL"
-  elseif l:mode==#"i"
-    return "INSERT"
-  elseif l:mode==#"R"
-    return "REPLACE"
-  elseif l:mode==?"s"
-    return "SELECT"
-  elseif l:mode==#"t"
-    return "TERMINAL"
-  elseif l:mode==#"c"
-    return "COMMAND"
-  elseif l:mode==#"!"
-    return "SHELL"
-  endif
-endfunction
+ 
+" Yank visual to clipboard
+vnoremap <Leader>y :w !xclip -selection clipboard<CR><CR>
 
-function! StatuslineGitBranch()
-  let b:gitbranch=""
-  if &modifiable
-    try
-      let l:dir=expand('%:p:h')
-      let l:gitrevparse = system("git -C ".l:dir." rev-parse --abbrev-ref HEAD")
-      if !v:shell_error
-        let b:gitbranch="(".substitute(l:gitrevparse, '
-', '', 'g').") "
-      endif
-    catch
-    endtry
-  endif
-endfunction
-
-augroup GetGitBranch
-  autocmd!
-  autocmd VimEnter,WinEnter,BufEnter * call StatuslineGitBranch()
-augroup END
-
-set completeopt-=preview
-
-
-nmap <F5> <Plug>(grammarous-move-to-next-error)
+noremap <Leader>c ggVG='' 
 
 
 

@@ -11,10 +11,12 @@ borg create --progress -v --stats --chunker-params 19,23,21,4095                
     --exclude-caches \
     --exclude '/home/*/.cache'                  \
     --exclude '/home/*/Downloads'                  \
+    --exclude '/home/*/SeaDrive'                  \
     --exclude '/home/*/.local/share/Trash/*'                  \
     --exclude '*.pyc' \
     --exclude '*Steam/*' \
     --exclude '*.vdi' \
+    --exclude '*.vmdk' \
     --exclude '*.sav' 
 
 # Use the `prune` subcommand to maintain 7 daily, 4 weekly and 6 monthly

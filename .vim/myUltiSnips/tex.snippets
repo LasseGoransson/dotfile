@@ -1,27 +1,45 @@
-snippet beg "begin{} / end{}" bA
+snippet beg "begin{} / end{}" 
 \begin{$1}
 	$0
 \end{$1}
 endsnippet
 
+snippet "scr (\S.*\S)" "screenshot figure with name" wr
+`!p
+if snip.c == "":
+	import os
+	import re
+	path = vim.eval('expand("%:p:h")')
+	os.chdir(path)
+	
+	imgName = match.group(1)
+	fileName = re.sub('\s','-',imgName)
+	fileExt = '.png'
+	num = 1
 
-snippet fig "figure" bA
-\begin{figure}[H]
-\includegraphics[scale=0.3]{`
+	if not os.path.exists("images"):
+		os.mkdir("images")
 
-#!/bin/bash
+	if not os.path.exists("images/" + fileName+fileExt):
+		totalName = "images/" + fileName+fileExt
+	else:
+		while os.path.exists("images/" + fileName+"-"+str(num)+fileExt):
+			num += 1
+		totalName = "images/" + fileName+"-"+str(num)+fileExt
 
-#cd $(dirname $1)
-mkdir -p images/
-scrot -s 'screenshot-%Y_%m_%d_%H_%M_%S.png' -e 'mv $f images/; echo images/$f';
 
-`}
-\end{figure}
+	os.system("import " + totalName)
+	snip += r"\begin{figure}[H]"
+	snip >> 1
+	snip += r"\centering"
+	snip += r"\includegraphics[width=0.8\textwidth]{" + totalName + "}"
+	snip += r'\caption{' + imgName + r'}'
+	snip += r'\label{fig:' + fileName + r'}'
+	snip << 1
+	snip += r"\end{figure}"
+
+`
 endsnippet
-
-
-
-
 
 snippet isvg "includesvg"
 \begin{figure}[H]
@@ -45,11 +63,11 @@ else:
 endsnippet
 
 snippet dm "Math" wA
-\[
+\begin{align*}
 $1
-\] $0
+\end{align*}
+$0
 endsnippet
-
 
 snippet bma "BMatrix"
 \begin{bmatrix}
@@ -74,15 +92,24 @@ endsnippet
 
 # Section and subsection
 
-snippet sec "Section" bA 
-\section*{$1}
+snippet sec "Section"
+\section{$1}
 endsnippet
 
-snippet ssec "Subsection" bA 
+snippet ssec "Subsection" 
 \subsection*{$1}
 endsnippet
-snippet sssec "SubSubSection" bA 
-\subsubsection*{$1}
+
+snippet sssec "SubSubSection"
+\subsubsection{$1}
+endsnippet
+
+snippet lec "Lection" 
+
+\lec{$1} 
+
+$0
+
 endsnippet
 
 # Subscript 
@@ -122,49 +149,82 @@ snip.rv = eval('latex(' + match.group(1).replace('\\', '') \
 `
 endsnippet
 
-
-# Latex template
-snippet textem "LaTeX Template" bA 
-
-\documentclass[a4paper,11pt]{article}
-\usepackage[headheight=14pt, top=0.5cm, bottom=0.5cm, left=.5cm, right=.5cm]{geometry}
-\usepackage{graphicx}
-\usepackage{amsmath}
-\usepackage{tikz}
-\usepackage{float}
-\usepackage{transparent}
-\usepackage{xifthen}
-\usepackage{import}
-\usepackage[final]{pdfpages}
-\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
-\setboolean{@twoside}{false}
-\pdfminorversion=7
-\setlength\parindent{0pt}
-
-\newcommand{\incfig}[1]{%
-    \def\svgwidth{\columnwidth}
-    \import{./figures/}{#1.pdf_tex}
-}
-
-\begin{document}
-\title{$1}
-\date{}
-\maketitle
-\vspace{-2cm}
-
-
-$2
-
-
-
-\end{document}
-endsnippet
-
 priority 1000
 snippet int
 \int_{$1}^{$2}$0
 endsnippet
 
 
+# Latex template
+snippet textem "LaTeX Template" bA 
+
+\documentclass{article}
+\usepackage{commonnote} % own package in ~/texmf
+
+\begin{document}
+\title{Course Name \\\ \normalsize{Fall 2020 - SDU}}
+\date{}
+\maketitle
+
+$0
+
+\end{document}
+
+endsnippet
+
+snippet Sigma "sigma" i
+\Sigma $0
+endsnippet
+
+snippet sigma "sigma" i
+\sigma $0
+endsnippet
+
+snippet alp "alpha" i
+\alpha $0
+endsnippet
+
+snippet mu "alpha" i
+\mu $0
+endsnippet
 
 
+snippet pdf "pdf import" b
+
+\newpage
+\begin{figure}[H] 
+    \centering
+   \includegraphics[page=$2,width=\textwidth]{$1} 
+\end{figure}
+$0
+endsnippet
+
+snippet "notePDF (.*)" "Add pdf pages with text underneith" wr
+`!p
+import subprocess as sp
+cmd = "pdfinfo " + match.group(1) + r" | sed -nE 's/Pages:\s+([0-9]+)/\1/p'"
+pages = int(sp.check_output(cmd,shell=True))
+
+for p in range(1,pages+1):
+	if(p != 1):
+		snip += r"\newpage"
+	snip += r"\begin{figure}[h]"
+	snip >> 1
+	snip += r"\makebox[\textwidth][c]{"
+	snip >> 1
+	snip += r"\centering"
+	snip += r"\includegraphics[page="+str(p)+r",width=\pagewidth]{"+match.group(1)+"}"
+	snip << 1
+	snip += r"}"
+	snip += r"\makebox[\textwidth][c]{"
+	snip >> 1
+	snip += r"\rule{\pagewidth}{0.01pt}"
+	snip << 1
+	snip += r"}"
+	snip << 1
+	snip += r"\end{figure}"
+	snip += r""
+	snip += r""
+	snip += r""
+`
+endsnippet

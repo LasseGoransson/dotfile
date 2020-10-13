@@ -163,12 +163,11 @@ alias  "cpu-per=sudo cpupower frequency-set -g performance"
 alias  "cpu-save=sudo cpupower frequency-set -g powersave"
 
 # GIT ALIAS
-alias status="git status "
-alias add="git add "
-alias commit="git commit "
-alias pull="git pull"
+#alias add="git add "
+#alias commit="git commit "
+#alias pull="git pull"
 
-alias conf='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME' 
+alias conf='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME ' 
 alias confsave='conf commit -am "changes" && conf push'
 # Vim Stuff
 #xmodmap .xmodmap > /dev/null 2>&1
@@ -247,7 +246,6 @@ function parse_git_dirty {
 export PS1="\u@\h:\W:\`parse_git_branch\` "
 export GDK_DPI_SCALE=0.5
 md () { mkdir -p "$@" && cd "$1"; }
-
 #ROBWORK#
 export RW_ROOT=~/RobWork/RobWork/
 export RWS_ROOT=~/RobWork/RobWorkStudio/
