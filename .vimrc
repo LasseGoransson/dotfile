@@ -42,6 +42,7 @@ filetype on
 filetype indent on
 filetype plugin on
 filetype plugin indent on
+autocmd VimResized * wincmd =
 set encoding=utf-8
 set number
 set relativenumber
