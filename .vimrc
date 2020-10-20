@@ -100,6 +100,8 @@ noremap  tn  :tabnew<CR>
 nnoremap  <leader>q   :Explore<CR>
 
 
+" Disable scratchbar
+set completeopt-=preview
 
 
 " Spell check

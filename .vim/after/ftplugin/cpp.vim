@@ -1,7 +1,8 @@
 
 " C++ 
 nnoremap <C-c> :wa <CR> :!clear && cmake . -B build &&  cmake --build build/ <CR>
-inoremap <C-c> <Esc> :wa <CR> :!clear && cmake . -B build &&  cmake --build build/ <CR>
+"nnoremap <C-c> :vert ter ++shell ++close cmake . -B build &&  cmake --build build/  || read<CR>
+"inoremap <C-c> <Esc> :wa <CR> :!clear && cmake . -B build &&  cmake --build build/ <CR>
 
 " nnoremap <Leader>r :!clear && ./build/project<CR>
 " Run compiled executable
