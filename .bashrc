@@ -118,38 +118,15 @@ export HISTSIZE=10000
 export HISTFILESIZE=10000
 export PROMPT_COMMAND='history -a'
 
-#
-# # ex - archive extractor
-# # usage: ex <file>
-ex ()
-{
-  if [ -f $1 ] ; then
-    case $1 in
-      *.tar.bz2)   tar xjf $1   ;;
-      *.tar.gz)    tar xzf $1   ;;
-      *.bz2)       bunzip2 $1   ;;
-      *.rar)       unrar x $1     ;;
-      *.gz)        gunzip $1    ;;
-      *.tar)       tar xf $1    ;;
-      *.tbz2)      tar xjf $1   ;;
-      *.tgz)       tar xzf $1   ;;
-      *.zip)       unzip $1     ;;
-      *.Z)         uncompress $1;;
-      *.7z)        7z x $1      ;;
-      *)           echo "'$1' cannot be extracted via ex()" ;;
-    esac
-  else
-    echo "'$1' is not a valid file"
-  fi
-}
-
-
+# 4k Stuff
 export QT_SCALE_FACTOR=1
 export QT_AUTO_SCREEN_SCALE_FACTOR=0
 export QT_SCREEN_SCALE_FACTORS=2
 
 PATH=$PATH:~/.bin/:/home/lasg/.local/bin
-#PATH=$PATH:$HOME/embed/gcc-arm-none-eabi-5_4-2016q3/bin
+
+export EDITOR=nvim
+
 #Alias
 alias bbackup="~/dotfiles/borg.sh"
 alias updatesys="pacaur -Syu"
@@ -184,14 +161,6 @@ zat()
 zathura "$1" &
 sleep 1 && exit
 }
-
-gaze()
-{
-tmux new -d -s "gazebo" 'sudo bash -c "cd /home/lasg/procode/gazeboProject; ./gazebo_client.sh; bash" ' \; split-window -d  'bash -c "cd /home/lasg/procode/gazeboProject; ./gazebo_server.sh bigworld.world; bash" '\;  attach\;
-}
-
-alias swin="vboxmanage startvm Windows && exit"
-
 
 COLOR_RED="\033[0;31m"
 COLOR_YELLOW="\033[0;33m"
@@ -254,4 +223,5 @@ export RW_ROOT=~/RobWork/RobWork/
 export RWS_ROOT=~/RobWork/RobWorkStudio/
 export RWHW_ROOT=~/RobWork/RobWorkHardware/
 export RWSIM_ROOT=~/RobWork/RobWorkSim/
+
 

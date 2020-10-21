@@ -7,3 +7,5 @@ i3-msg 'workspace 1'
 picom & 
 autotiling &
 flashfocus &
+
+bash  ~/scripts/wallpaper.sh &
