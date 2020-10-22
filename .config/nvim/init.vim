@@ -18,6 +18,7 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 " Vim Autosave
 Plug 'vim-scripts/vim-auto-save'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 " Colors section
@@ -105,12 +106,7 @@ nnoremap <Leader>sp :set spell spelllang=en_us<CR>
 " Quick edit
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
-" GIT
-"nnoremap <leader>a :w <CR> :!git add %<CR>
-let g:gitgutter_realtime = 1  
-let g:gitgutter_eager = 1
 
-"
 " Split navigation
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
