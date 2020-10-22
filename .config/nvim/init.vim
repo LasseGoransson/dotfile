@@ -4,48 +4,33 @@
 " - For Neovim: ~/.local/share/nvim/plugged
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.config/nvim/plugged')
-
-Plug 'airblade/vim-gitgutter'
-
-Plug 'jdsimcoe/abstract.vim'
-
+" Current colorscheme
 Plug 'sainnhe/forest-night'
-
 " Allows sending text to other windows
 Plug 'jpalardy/vim-slime'
-
-
+" Latex support in vim
 Plug 'lervag/vimtex'
-
-" YouCompleteMe
+" YouCompleteMe autocomplete
 Plug 'Valloric/YouCompleteMe'
-
-" Track the engine.
+" ultisnips engine.
 Plug 'SirVer/ultisnips'
-
 " Snippets are separated from the engine. Add this if you want them:
 Plug 'honza/vim-snippets'
-
-
+" Vim Autosave
 Plug 'vim-scripts/vim-auto-save'
-
-
-Plug 'rhysd/vim-grammarous'
-
-
 call plug#end()
 
 " Colors section
 colorscheme forest-night
 
-
-" Settings
+" Vim Settings
 set nocompatible
 filetype on
 filetype indent on
 set updatetime=100
 filetype plugin on
 filetype plugin indent on
+" Makes vim resize more comp. with i3wm
 autocmd VimResized * wincmd =
 set encoding=utf-8
 set number
