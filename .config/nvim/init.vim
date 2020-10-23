@@ -3,45 +3,35 @@
 " Specify a directory for plugins
 " - For Neovim: ~/.local/share/nvim/plugged
 " - Avoid using standard Vim directory names like 'plugin'
-call plug#begin('~/.vim/plugged')
-
-Plug 'jdsimcoe/abstract.vim'
-
-
+call plug#begin('~/.config/nvim/plugged')
+" Current colorscheme
+Plug 'sainnhe/forest-night'
 " Allows sending text to other windows
 Plug 'jpalardy/vim-slime'
-
-
+" Latex support in vim
 Plug 'lervag/vimtex'
-
-" YouCompleteMe
+" YouCompleteMe autocomplete
 Plug 'Valloric/YouCompleteMe'
-
-" Track the engine.
+" ultisnips engine.
 Plug 'SirVer/ultisnips'
-
 " Snippets are separated from the engine. Add this if you want them:
 Plug 'honza/vim-snippets'
-
-
+" Vim Autosave
 Plug 'vim-scripts/vim-auto-save'
-
-
-Plug 'rhysd/vim-grammarous'
-
-
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 " Colors section
 colorscheme forest-night
 
-
-" Settings
+" Vim Settings
 set nocompatible
 filetype on
 filetype indent on
+set updatetime=100
 filetype plugin on
 filetype plugin indent on
+" Makes vim resize more comp. with i3wm
 autocmd VimResized * wincmd =
 set encoding=utf-8
 set number
@@ -59,7 +49,7 @@ set expandtab
 
 
 " Define where slime sends output
-let g:slime_target = "vimterminal"
+let g:slime_target = "neovim"
 
 " Define leader key
 let mapleader= ","
@@ -116,11 +106,7 @@ nnoremap <Leader>sp :set spell spelllang=en_us<CR>
 " Quick edit
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
-" GIT
-"nnoremap <leader>a :w <CR> :!git add %<CR>
 
-
-"
 " Split navigation
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -129,7 +115,7 @@ nnoremap <C-H> <C-W><C-H>
 
 
 " Ultisnips
-let g:UltiSnipsSnippetsDir = "~/.vim/myUltiSnips"
+let g:UltiSnipsSnippetsDir = "~/.config/nvim/myUltiSnips"
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "myUltiSnips"]
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger='<Leader>e'
@@ -142,7 +128,7 @@ let g:UltiSnipsJumpBackwardTrigger='<c-k>'
 
 
 " Edit type commands
-nnoremap <Leader>fe :vsp ~/.vim/after/ftplugin/%:e.vim<CR> 
+nnoremap <Leader>fe :vsp ~/.config/nvim/after/ftplugin/%:e.vim<CR> 
 
 " Open h file matching cpp file
 nnoremap <Leader>h :vsp %:p:r.h <CR>
@@ -151,7 +137,6 @@ nnoremap <Leader>h :vsp %:p:r.h <CR>
 " Yank visual to clipboard
 vnoremap <Leader>y :w !xclip -selection clipboard<CR><CR>
 
-noremap <Leader>c ggVG='' 
 
-
-
+" Allow easy normal mode from terminal
+tnoremap <Esc> <C-\><C-n>

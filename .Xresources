@@ -12,7 +12,7 @@ URxvt.font: xft:Noto Sans Mono Medium:size=11:antialias=true
 
 URxvt.depth:                      32
 !URxvt.background:                 [100]#222D31
-URxvt.background:                 [100]#0a0a0a
+URxvt.background:                 [100]#262626
 URxvt*scrollBar:                  false
 URxvt*mouseWheelScrollPage:       false
 URxvt*cursorBlink:                true
