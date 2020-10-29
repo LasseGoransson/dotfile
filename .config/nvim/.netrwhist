@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =5
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/home/lasg/Seafile/kandidat/1semester/rovi/docker/Robotics_and_Vision_Virtual_machine'
 let g:netrw_dirhist_5='/home/lasg/Seafile/kandidat/1semester/embed/code/ESDLAB/include/ESDLAB/driver'
 let g:netrw_dirhist_4='/home/lasg/Seafile/kandidat/1semester/embed/code/ESDLAB/include/ESDLAB'
 let g:netrw_dirhist_3='/home/lasg/Seafile/kandidat/1semester/embed/code/ESDLAB/include'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_0='/home/lasg/Seafile/kandidat/1semester/embed/code/ESDLAB/s
 let g:netrw_dirhist_9='/home/lasg/Seafile/kandidat/1semester/embed/code/ESDLAB'
 let g:netrw_dirhist_8='/home/lasg/Seafile/kandidat/1semester/embed/code/ESDLAB/src'
 let g:netrw_dirhist_7='/home/lasg/Seafile/kandidat/1semester/embed/code/ESDLAB'
-let g:netrw_dirhist_6='/home/lasg/Seafile/kandidat/1semester/embed/code/ESDLAB/include/ESDLAB'
