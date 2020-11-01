@@ -231,3 +231,4 @@ export RWHW_ROOT=~/RobWork/RobWorkHardware/
 export RWSIM_ROOT=~/RobWork/RobWorkSim/
 
 
+alias rovi='make -f /home/lasg/sem/rovi/docker/Robotics_and_Vision_Virtual_machine/Makefile'

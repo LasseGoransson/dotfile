@@ -4,6 +4,10 @@ snippet beg "begin{} / end{}"
 \end{$1}
 endsnippet
 
+snippet def
+\overset{$2}{$1} $0
+endsnippet
+
 snippet "scr (\S.*\S)" "screenshot figure with name" wr
 `!p
 if snip.c == "":
