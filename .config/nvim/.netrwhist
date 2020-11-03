@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =4
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/lasg/Seafile/kandidat/1semester/rovi/ROVI/software/Project_WorkCell'
+let g:netrw_dirhist_6='/home/lasg/Seafile/kandidat/1semester/rovi/ROVI/software'
+let g:netrw_dirhist_5='/home/lasg/Seafile/kandidat/1semester/rovi/ROVI/software/ReachabilityAnalysis_solution'
 let g:netrw_dirhist_4='/home/lasg/Seafile/kandidat/1semester/intro_ai/introai/software/robot'
 let g:netrw_dirhist_3='/home/lasg/Seafile/kandidat/1semester/rovi/ROVI/software/ReachabilityAnalysis_solution'
 let g:netrw_dirhist_2='/home/lasg/Seafile/kandidat/1semester/rovi/ROVI/software'
@@ -7,6 +10,3 @@ let g:netrw_dirhist_1='/home/lasg/Seafile/kandidat/1semester/rovi/ROVI'
 let g:netrw_dirhist_0='/home/lasg/Seafile/kandidat/1semester/rovi'
 let g:netrw_dirhist_9='/home/lasg/Seafile/kandidat/1semester/rovi/ROVI'
 let g:netrw_dirhist_8='/home/lasg/Seafile/kandidat/1semester/rovi'
-let g:netrw_dirhist_7='/home/lasg/Seafile/kandidat/1semester/rovi/docker'
-let g:netrw_dirhist_6='/home/lasg/Seafile/kandidat/1semester/rovi/docker/Robotics_and_Vision_Virtual_machine'
-let g:netrw_dirhist_5='/home/lasg/Seafile/kandidat/1semester/embed/code/ESDLAB/include/ESDLAB/driver'
