@@ -11,5 +11,6 @@ nnoremap <Leader>r :!clear && ./build/$(cat CMakeLists.txt \| grep -i add_execut
 "command Symlink execute "! ln -s build/compile_commands.json ."
 "echo test
 "
-nnoremap <Leader>d :!docker exec -w $(pwd -P) --interactive $(cat /tmp/rovi/rovi_container_id) bash -c './bin/$(cat CMakeLists.txt \| grep -i add_executable \| sed -E "s/.*\(\s*(\S+).*/\1/g")'<CR>
+nnoremap <Leader>d :!docker exec -w $(pwd -P) --interactive $(cat /tmp/rovi/rovi_container_id) bash -c './build/$(cat CMakeLists.txt \| grep -i add_executable \| sed -E "s/.*\(\s*(\S+).*/\1/g")'<CR>
  
+nnoremap <C-d> :!docker exec -w $(pwd -P) --interactive $(cat /tmp/rovi/rovi_container_id) bash -c 'cmake . -B build &&  cmake --build build/'<CR>
