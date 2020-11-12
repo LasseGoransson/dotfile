@@ -9,8 +9,9 @@ nnoremap <C-c> :wa <CR> :!clear && cmake . -B build &&  cmake --build build/ <CR
 nnoremap <Leader>r :!clear && ./build/$(cat CMakeLists.txt \| grep -i add_executable \| sed -E "s/.*\(\s*(\S+).*/\1/g")<CR>
 
 "command Symlink execute "! ln -s build/compile_commands.json ."
-"echo test
-"
+
+command Rovimode execute ":let g:ycm_clangd_binary_path='/home/lasg/sem/rovi/docker/Robotics_and_Vision_Virtual_machine/rovi-clangd' | :YcmRestartServer"
+
 nnoremap <Leader>d :!docker exec -w $(pwd -P) --interactive $(cat /tmp/rovi/rovi_container_id) bash -c './build/$(cat CMakeLists.txt \| grep -i add_executable \| sed -E "s/.*\(\s*(\S+).*/\1/g")'<CR>
  
 nnoremap <C-d> :!docker exec -w $(pwd -P) --interactive $(cat /tmp/rovi/rovi_container_id) bash -c 'cmake . -B build &&  cmake --build build/'<CR>
