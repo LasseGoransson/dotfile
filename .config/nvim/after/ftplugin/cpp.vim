@@ -13,4 +13,4 @@ nnoremap <Leader>r :!clear && ./build/$(cat CMakeLists.txt \| grep -i add_execut
 "
 nnoremap <Leader>d :!docker exec -w $(pwd -P) --interactive $(cat /tmp/rovi/rovi_container_id) bash -c './build/$(cat CMakeLists.txt \| grep -i add_executable \| sed -E "s/.*\(\s*(\S+).*/\1/g")'<CR>
  
-nnoremap <C-d> :!docker exec -w $(pwd -P) --interactive $(cat /tmp/rovi/rovi_container_id) bash -c 'cmake . -B build &&  cmake --build build/'<CR>
+nnoremap <C-d> :!docker exec -w $(pwd -P) --interactive $(cat /tmp/rovi/rovi_container_id) bash -c 'cmake . -Bbuild &&  cmake --build build/'<CR>
