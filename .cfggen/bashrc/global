@@ -162,6 +162,11 @@ zathura "$1" &
 sleep 1 && exit
 }
 
+
+
+
+
+
 COLOR_RED="\033[0;31m"
 COLOR_YELLOW="\033[0;33m"
 COLOR_GREEN="\033[0;32m"
@@ -217,7 +222,8 @@ function parse_git_dirty {
 }
 
 export PS1="\u@\h:\W:\`parse_git_branch\` "
-
+export GDK_DPI_SCALE=0.5
+md () { mkdir -p "$@" && cd "$1"; }
 #ROBWORK#
 export RW_ROOT=~/RobWork/RobWork/
 export RWS_ROOT=~/RobWork/RobWorkStudio/
