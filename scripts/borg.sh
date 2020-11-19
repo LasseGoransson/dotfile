@@ -1,6 +1,6 @@
 #!/bin/sh
 
-REPOSITORY=root@backup.lan:borg/laptop
+REPOSITORY=ssh://root@goransson.dk:1697/root/borg/laptop
 
 
 # Backup all of /home and /var/www except a few
