@@ -19,6 +19,9 @@ Plug 'honza/vim-snippets'
 " Vim Autosave
 Plug 'vim-scripts/vim-auto-save'
 Plug 'tpope/vim-fugitive'
+
+Plug 'ActivityWatch/aw-watcher-vim'
+
 call plug#end()
 
 " Colors section
