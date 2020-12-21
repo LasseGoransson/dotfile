@@ -1,0 +1,12 @@
+exec_always --no-startup-id ~/.screenlayout/default.sh
+
+workspace 8 output DP-4
+workspace 1 output HDMI-0
+
+# Gaps
+gaps inner 10
+gaps outer 0
+smart_gaps on
+new_window none
+
+
