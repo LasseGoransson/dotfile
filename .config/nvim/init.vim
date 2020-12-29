@@ -40,6 +40,7 @@ set encoding=utf-8
 set number
 set relativenumber
 set splitright
+set splitbelow
 set t_Co=256
 
 filetype plugin indent on
@@ -84,6 +85,7 @@ let g:vimtex_compiler_latexmk = {
     \}
 
 let g:ycm_collect_identifiers_from_tags_files = 1
+let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
 
 
 " Remaps
@@ -143,3 +145,8 @@ vnoremap <Leader>y :w !xclip -selection clipboard<CR><CR>
 
 " Allow easy normal mode from terminal
 tnoremap <Esc> <C-\><C-n>
+
+" Open git gui in working dir
+nnoremap <Leader>g :!git gui & <CR>
+
+
