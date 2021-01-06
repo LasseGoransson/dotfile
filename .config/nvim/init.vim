@@ -43,6 +43,8 @@ set splitright
 set splitbelow
 set t_Co=256
 
+
+
 filetype plugin indent on
 " show existing tab with 4 spaces width
 set tabstop=4
@@ -58,6 +60,20 @@ let g:slime_target = "neovim"
 " Define leader key
 let mapleader= ","
 let maplocalleader= "-"
+
+"let g:netrw_liststyle=3
+"let g:netrw_banner = 0
+"let g:netrw_browse_split = 2
+
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 25
+augroup ProjectDrawer
+  autocmd!
+  autocmd VimEnter * :Vexplore
+augroup END
 
 
 " Latex setup
