@@ -18,6 +18,7 @@ bindsym $mod+q kill
 #bindsym $mod+d exec dmenu_run -fn "DejaVu Sans Mono-15"
 bindsym $mod+d exec rofi -show run
 bindsym $mod+t exec ~/scripts/rofi/terminalFolder.sh
+bindsym $mod+o exec ~/scripts/rofi/vimsession.sh
 
 # Move focus:
 bindsym $mod+Left focus left
