@@ -1,9 +1,5 @@
-exec_always --no-startup-id ~/.screenlayout/default.sh
+#exec_always --no-startup-id ~/.screenlayout/default.sh
 
-workspace 10 output DP-0
-workspace 9 output DP-0
-workspace 1 output HDMI-0
-workspace 2 output HDMI-0
 
 # Gaps
 gaps inner 10

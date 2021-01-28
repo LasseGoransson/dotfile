@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =3
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/lasg/.cfggen/xresources'
 let g:netrw_dirhist_3='/home/lasg/Seafile/kandidat/1semester/embed/ESD-E2020-code'
 let g:netrw_dirhist_2='/home/lasg/Seafile/kandidat/1semester/embed/ESD-E2020-code/src'
 let g:netrw_dirhist_1='/home/lasg/Seafile/kandidat/1semester/embed/ESD-E2020-code'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_8='/home/lasg/Seafile/kandidat/1semester/embed/ESD-E2020-cod
 let g:netrw_dirhist_7='/home/lasg/Seafile/kandidat/1semester/embed/ESD-E2020-code'
 let g:netrw_dirhist_6='/home/lasg/Seafile/kandidat/1semester/embed/ESD-E2020-code/app'
 let g:netrw_dirhist_5='/home/lasg/Seafile/kandidat/1semester/embed/ESD-E2020-code'
-let g:netrw_dirhist_4='/home/lasg/Seafile/kandidat/1semester/embed/ESD-E2020-code/app'
