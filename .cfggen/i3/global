@@ -97,6 +97,7 @@ bindsym $mod+r mode "resize"
 mode "(s)hutdown, r(eboot)" {
 bindsym s exec "poweroff"; mode "default"
 bindsym r exec reboot; mode "default"
+bindsym h exec systemctl suspend; mode "default"
 
 bindsym Escape mode "default"
 }

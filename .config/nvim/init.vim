@@ -18,9 +18,8 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 " Vim Autosave
 Plug 'vim-scripts/vim-auto-save'
-Plug 'tpope/vim-fugitive'
 
-Plug 'ActivityWatch/aw-watcher-vim'
+Plug 'pearofducks/ansible-vim'
 
 call plug#end()
 
@@ -89,14 +88,26 @@ let g:tex_conceal='abdmg'
 let g:tex_flavor = "latex"
 " Disable warnings about missing clientserver, since none is available
 "let g:vimtex_compiler_latexmk = {'callback' : 0}
+"let g:vimtex_compiler_latexmk = {
+"    \ 'options' : [
+"    \   '-pdf',
+"    \   '-shell-escape',
+"    \   '-verbose',
+"    \   '-file-line-error',
+"    \   '-synctex=0',
+"    \   '-interaction=nonstopmode',
+"    \ ],
+"    \}
+
 let g:vimtex_compiler_latexmk = {
+		\ 'executable' : 'latexmk',
+		\ 'callback' : 0,
     \ 'options' : [
-    \   '-pdf',
-    \   '-shell-escape',
-    \   '-verbose',
+    \   '-pdflualatex="lualatex -shell-escape %O %S"',
     \   '-file-line-error',
-    \   '-synctex=0',
+    \   '-synctex=1',
     \   '-interaction=nonstopmode',
+    \   '-f',
     \ ],
     \}
 
