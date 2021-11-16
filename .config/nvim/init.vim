@@ -21,10 +21,12 @@ Plug 'vim-scripts/vim-auto-save'
 
 Plug 'pearofducks/ansible-vim'
 
+Plug 'jacoborus/tender.vim'
+
 call plug#end()
 
 " Colors section
-colorscheme forest-night
+colorscheme tender
 
 " Vim Settings
 set nocompatible
